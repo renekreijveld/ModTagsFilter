@@ -1,5 +1,5 @@
-Tags Filer module
-==============================
+Tags Filter module
+==================
 
 This Joomla 3.x module allows you to filter your category blog on a chosen tag.
 The module automatically shows all tags used in your articles for the articles that are published.
