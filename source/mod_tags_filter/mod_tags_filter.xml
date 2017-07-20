@@ -7,21 +7,28 @@
 	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
 	<authorEmail>email@renekreijveld.nl</authorEmail>
 	<authorUrl>www.renekreijveld.nl</authorUrl>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<description>MOD_TAGS_FILTER_XML_DESCRIPTION</description>
+    <scriptfile>script.php</scriptfile>
+
+	<updateservers>
+		<server type="extension" name="Tags - Filter module" priority="1">https://www.renekreijveld.nl/updates/rkr_mod_tags_filter/extension.xml</server>
+	</updateservers>
+
 	<files>
 		<filename module="mod_tags_filter">mod_tags_filter.php</filename>
 		<folder>tmpl</folder>
 		<filename>helper.php</filename>
 		<filename>LICENSE.txt</filename>
 	</files>
+
 	<languages folder="language">
 		<language tag="en-GB">en-GB/en-GB.mod_tags_filter.ini</language>
 		<language tag="en-GB">en-GB/en-GB.mod_tags_filter.sys.ini</language>
 		<language tag="nl-NL">nl-NL/nl-NL.mod_tags_filter.ini</language>
 		<language tag="nl-NL">nl-NL/nl-NL.mod_tags_filter.sys.ini</language>
 	</languages>
-    <scriptfile>script.php</scriptfile>
+
 	<config>
 		<fields name="params">
 			<fieldset name="basic">

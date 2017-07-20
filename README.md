@@ -16,3 +16,7 @@ When you click on one of the tags, the category blog is updated and only show th
 * Create a new module of the type Tag - Filter.
 * In the module tab set the sort order of the tags and optionally set of you want to show a message when no tags are found.
 * Publish the module on a menu item that displays your category blog.
+
+# Update instructions
+* This module used the default extension update system of Joomla.
+* When a new version is available, you will be automatically notified through the extension update system.
