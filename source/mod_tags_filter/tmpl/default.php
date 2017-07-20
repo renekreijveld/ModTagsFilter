@@ -30,7 +30,7 @@ else
 			{
 				$active = '';
 			}
-			echo "<li><a class=\"$active\" onclick=\"filterTag($tag->tag_id)\">$tag->title</a></li>";
+			echo "<li class=\"$active\"><a onclick=\"filterTag($tag->tag_id)\">$tag->title</a></li>";
 		}
 		?>
 		<li><a onclick="clearFilter()"><?php echo JText::_('MOD_TAGS_FILTER_RESET_FILTER'); ?></a></li>
