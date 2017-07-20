@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     mod_tags_filter
- * @version     1.0.2
+ * @version     1.0.3
  * @copyright   Copyright (C) 2017 Rene Kreijveld Webdevelopment, Inc. All rights reserved.
  * @license     GNU General Public License version 3 or later; see LICENSE.txt
  *              Parts of this code are based on the original work of the Joomla project.
@@ -22,7 +22,15 @@ else
 	<ul class="nav nav-pills nav-stacked">
 		<?php foreach ($list as $tag)
 		{
-			echo "<li><a onclick=\"filterTag($tag->tag_id)\">$tag->title</a></li>";
+			if ($active_tagid > -1 && $active_tagid == $tag->tag_id)
+			{
+				$active = 'active';
+			}
+			else
+			{
+				$active = '';
+			}
+			echo "<li><a class=\"$active\" onclick=\"filterTag($tag->tag_id)\">$tag->title</a></li>";
 		}
 		?>
 		<li><a onclick="clearFilter()"><?php echo JText::_('MOD_TAGS_FILTER_RESET_FILTER'); ?></a></li>

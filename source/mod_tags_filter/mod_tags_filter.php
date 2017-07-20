@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     mod_tags_filter
- * @version     1.0.2
+ * @version     1.0.3
  * @copyright   Copyright (C) 2017 Rene Kreijveld Webdevelopment, Inc. All rights reserved.
  * @license     GNU General Public License version 3 or later; see LICENSE.txt
  *              Parts of this code are based on the original work of the Joomla project.
@@ -18,6 +18,16 @@ $cacheparams->class = 'ModTagsFilterHelper';
 $cacheparams->method = 'getList';
 $cacheparams->methodparams = $params;
 $cacheparams->modeparams = array('id' => 'array', 'Itemid' => 'int');
+
+if ($params->get('show_active', 1) == 1)
+{
+	$jinput = JFactory::getApplication()->input;
+	$active_tagid = $jinput->get('filter_tag', 0, 'INT');
+}
+else
+{
+	$active_tagid = -1;	
+}
 
 $list = JModuleHelper::moduleCache($module, $params, $cacheparams);
 

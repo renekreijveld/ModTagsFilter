@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     mod_tags_filter
- * @version     1.0.2
+ * @version     1.0.3
  * @copyright   Copyright (C) 2017 Rene Kreijveld Webdevelopment, Inc. All rights reserved.
  * @license     GNU General Public License version 3 or later; see LICENSE.txt
  *              Parts of this code are based on the original work of the Joomla project.

@@ -7,7 +7,7 @@
 	<license>GNU General Public License version 3 or later; see LICENSE.txt</license>
 	<authorEmail>email@renekreijveld.nl</authorEmail>
 	<authorUrl>www.renekreijveld.nl</authorUrl>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<description>MOD_TAGS_FILTER_XML_DESCRIPTION</description>
     <scriptfile>script.php</scriptfile>
 
@@ -49,6 +49,17 @@
 					description="MOD_TAGS_FILTER_FIELD_NO_RESULTS_DESC"
 					class="btn-group btn-group-yesno"
 					default="0"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="show_active"
+					type="radio"
+					label="MOD_TAGS_FILTER_FIELD_SHOW_ACTIVE_LABEL"
+					description="MOD_TAGS_FILTER_FIELD_SHOW_ACTIVE_DESC"
+					class="btn-group btn-group-yesno"
+					default="1"
 					>
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
