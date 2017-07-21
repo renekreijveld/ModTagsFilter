@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     mod_tags_filter
- * @version     1.0.3
+ * @version     1.0.4
  * @copyright   Copyright (C) 2017 Rene Kreijveld Webdevelopment, Inc. All rights reserved.
  * @license     GNU General Public License version 3 or later; see LICENSE.txt
  *              Parts of this code are based on the original work of the Joomla project.
@@ -30,6 +30,7 @@ else
 }
 
 $list = JModuleHelper::moduleCache($module, $params, $cacheparams);
+$all_text = $params->get('all_text');
 
 if (!count($list) && !$params->get('no_results_text'))
 {

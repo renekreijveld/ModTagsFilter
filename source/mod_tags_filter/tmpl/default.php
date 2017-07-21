@@ -1,7 +1,7 @@
 <?php
 /**
  * @package     mod_tags_filter
- * @version     1.0.3
+ * @version     1.0.4
  * @copyright   Copyright (C) 2017 Rene Kreijveld Webdevelopment, Inc. All rights reserved.
  * @license     GNU General Public License version 3 or later; see LICENSE.txt
  *              Parts of this code are based on the original work of the Joomla project.
@@ -30,10 +30,10 @@ else
 			{
 				$active = '';
 			}
-			echo "<li class=\"$active\"><a onclick=\"filterTag($tag->tag_id)\">$tag->title</a></li>";
+			echo "<li class=\"$active\"><a  style=\"cursor:pointer;\" onclick=\"filterTag($tag->tag_id)\">$tag->title</a></li>";
 		}
 		?>
-		<li><a onclick="clearFilter()"><?php echo JText::_('MOD_TAGS_FILTER_RESET_FILTER'); ?></a></li>
+		<li><a style="cursor:pointer;" onclick="clearFilter()"><?php echo $all_text; ?></a></li>
 	</ul>
 	<input id="filter_tag" name="filter_tag" value="" type="hidden">	
 </form>

@@ -64,6 +64,13 @@
 					<option value="1">JYES</option>
 					<option value="0">JNO</option>
 				</field>
+				<field
+					name="all_text"
+					type="text"
+					label="MOD_TAGS_FILTER_FIELD_ALL_TEXT_LABEL"
+					description="MOD_TAGS_FILTER_FIELD_ALL_TEXT_DESC"
+					default="Reset filter"
+				/>
 			</fieldset>
 			<fieldset name="advanced">
 				<field
