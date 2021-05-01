@@ -52,19 +52,6 @@ abstract class ModTagsFilterHelper
 		->join('INNER', $db->qn('#__ucm_content', 'c') . ' ON ' . $db->qn('m.core_content_id') . ' = ' . $db->qn('c.core_content_id'));
 
 		$query->where($db->quoteName('m.type_alias') . ' = "' . 'com_content.article' . '"');
-		
-		// Optionally filter on language based on the option "Language Filter" that is in the component Tags (refer screen "Tags: Options" tab "Item Selection")
-		$language = JComponentHelper::getParams('com_tags')->get('tag_list_language_filter', 'all');
-
-		if ($language !== 'all')
-		{
-			if ($language === 'current_language')
-			{
-				$language = JHelperContent::getCurrentLanguage();
-			}
-
-			$query->where($db->quoteName('t.language') . ' IN (' . $db->quote($language) . ', ' . $db->quote('*') . ')');
-		}
 
 		// Only return tags connected to published articles
 		$query->where($db->quoteName('c.core_state') . ' = 1')
